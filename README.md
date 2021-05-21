@@ -68,14 +68,16 @@
   Initilise Database using below command:
   
     airflow db init
-# Step 4: Connect Airflow to Postgresql
+# Step 4: Create airflow user to login
+    airflow users create -r Admin -e airflow@abc.com -f airflow -l airflow -u airflow -p airflow
+# Step 5: Connect Airflow to Postgresql
   Next we will work on connecting the airflow server to the Postgresql database as its metadata database.
   
     cd /home/airflow/airflow
     vi airflow.cfg
     -------------------------------------------------------------------------------
-    sql_alchemy_conn = postgresql+psycopg2://airflow:a1rfl0w@localhost:5432/airflow
     executor = LocalExecutor
+    sql_alchemy_conn = postgresql+psycopg2://airflow:a1rfl0w@localhost:5432/airflow
     load_examples = False
   
   Start Scheduler and Webservers:
@@ -87,4 +89,3 @@
     mkdir dags
     cd dags
     vi helloworld.py
-  
