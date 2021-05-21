@@ -79,11 +79,13 @@
     executor = LocalExecutor
     sql_alchemy_conn = postgresql+psycopg2://airflow:a1rfl0w@localhost:5432/airflow
     load_examples = False
-  
+# Step 6: Create service files for Scheduler and Webservers at below location:
+    sudo vi /etc/systemd/system/airflow-scheduler.service
+    sudo vi /etc/systemd/system/airflow-webserver.service    
   Start Scheduler and Webservers:
   
-    airflow scheduler
-    airflow webserver
+    sudo service airflow-scheduler start
+    sudo service airflow-webserver start
 # Step 5: Create dags
     cd /home/airflow/airflow
     mkdir dags
