@@ -20,7 +20,7 @@
   
   Provide sudo permissions for "airflow" user
     
-    sudo visudo
+    sudo vi /etc/sudoers
     -----------------------------
     airflow ALL=(ALL:ALL) ALL
     
