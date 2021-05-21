@@ -83,7 +83,7 @@
   Start Scheduler and Webservers:
   
     airflow scheduler
-    airflow webser
+    airflow webserver
 # Step 5: Create dags
     cd /home/airflow/airflow
     mkdir dags
