@@ -10,7 +10,7 @@
   
     sudo apt-get update
     sudo apt-get install python-psycopg2
-    sudo apt-get install postgresql postgresql-contrib
+    sudo apt-get install postgresql postgresql-contrib -y
    
   Also create an os user called "airflow" to do the rest of the installation
   
